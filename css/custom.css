@@ -123,6 +123,9 @@ a.btn-custom-hero:hover::after {
 #section-about {
   overflow: hidden;
 }
+#section-about-desc {
+  font-size: 18px;
+}
 
 @media screen and (max-width: 992px) {
   #section-about-desc {
@@ -494,6 +497,76 @@ a.btn-custom-hero:hover::after {
 /* Timeline Style */
 .timeline-item p {
   font-size: 18px;
+}
+/* ================================================== */
+/* Awards section */
+/* ================================================== */
+
+.awards {
+  background-color: #ffffff52;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  padding: 20px;
+  transition: 0.3s;
+
+  text-align: center;
+}
+
+#trigger {
+  position: relative;
+  top: 320px;
+}
+
+.awards-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+
+#awards-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.award-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.award-img-wrapper img {
+  height: 300px;
+  filter: drop-shadow(0px 0px 10px #00000088);
+}
+
+#award-1-place img {
+  height: 330px;
+}
+#award-3-place img {
+  height: 270px;
+}
+
+@media (min-width: 993px) {
+  #section-awards {
+    height: 2100px;
+  }
+
+  .awards-wrapper {
+    opacity: 0;
+  }
+  #awards-container {
+    flex-direction: row;
+  }
+
+  #award-2-place {
+    top: 430px
+  }
+
+  #award-3-place {
+    top: 860px
+  }
 }
 
 /* ================================================== */
