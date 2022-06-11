@@ -512,6 +512,7 @@ a.btn-custom-hero:hover::after {
   text-align: center;
 }
 
+
 #trigger {
   position: relative;
   top: 320px;
@@ -550,7 +551,7 @@ a.btn-custom-hero:hover::after {
 
 @media (min-width: 993px) {
   #section-awards {
-    height: 2100px;
+    height: calc(2100px + 100vh);
   }
 
   .awards-wrapper {
@@ -558,6 +559,7 @@ a.btn-custom-hero:hover::after {
   }
   #awards-container {
     flex-direction: row;
+    padding-top: 100vh;
   }
 
   #award-2-place {

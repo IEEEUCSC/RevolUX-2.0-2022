@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
      */
 
     // Opacity
+    const windowHeight = window.innerHeight;
 
     [1, 2, 3].forEach((i) => {
       const awardId = `#award-${i}-place`;
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Pin
     new ScrollMagic.Scene({
       triggerElement: "#trigger",
-      duration: 1200,
+      duration: 1200 + windowHeight,
     })
       .setPin("#awards-title", { pushFollowers: false })
       .setClassToggle("#awards-title", "green")
@@ -68,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     new ScrollMagic.Scene({
       triggerElement: "#trigger",
       duration: 1200,
+      offset: 0 + windowHeight,
     })
       .setPin(award1, { pushFollowers: false })
       .setClassToggle(award1, "green")
@@ -76,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     new ScrollMagic.Scene({
       triggerElement: "#trigger",
       duration: 800,
-      offset: 400,
+      offset: 400 + windowHeight,
     })
       .setPin(award2, { pushFollowers: false })
       .setClassToggle(award2, "green")
@@ -85,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     new ScrollMagic.Scene({
       triggerElement: "#trigger",
       duration: 400,
-      offset: 800,
+      offset: 800 + windowHeight,
     })
       .setPin(award3)
       .setClassToggle(award3, "green")
