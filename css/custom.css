@@ -613,12 +613,12 @@ a.btn-custom-hero:hover::after {
 
 .contact-list .contact-name {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .contact-list .contact-position {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .contact-list .contact-details > div {
