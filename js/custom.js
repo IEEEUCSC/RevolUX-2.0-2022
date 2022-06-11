@@ -13,24 +13,38 @@ document.addEventListener("DOMContentLoaded", () => {
    * Scroll Magic Stuff
    ***************************/
 
+  var controller = new ScrollMagic.Controller();
+
+  /**
+   * About Section
+   */
+  new ScrollMagic.Scene({
+    triggerElement: window.innerWidth > 993 ? "#section-about" : "#divisor",
+    duration: 300,
+  })
+    .setTween(
+      gsap.to("#divisor-2", {
+        css: { width: "100%" },
+        ease: "none",
+      })
+    )
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: window.innerWidth > 993 ? "#section-about" : "#divisor",
+    duration: 300,
+    offset: 300,
+  })
+    .setTween(
+      gsap.to("#divisor", {
+        css: { width: "100%" },
+        ease: "none",
+      })
+    )
+    .addTo(controller);
+
+  // Big screens
   if (window.innerWidth > 993) {
-    var controller = new ScrollMagic.Controller();
-
-    /**
-     * About Section
-     */
-    new ScrollMagic.Scene({
-      triggerElement: window.innerWidth > 993 ? "#section-about" : "#divisor",
-      duration: 400,
-    })
-      .setTween(
-        gsap.to("#divisor", {
-          css: { width: "100%" },
-          ease: "none",
-        })
-      )
-      .addTo(controller);
-
     /**
      * Awards Section
      */

@@ -140,35 +140,39 @@ a.btn-custom-hero:hover::after {
   padding-top: 30px;
 }
 
-#comparison figure {
-  background-image: url(../media/images/about/before.png);
+#comparison-before,
+#comparison #divisor,
+#comparison #divisor-2 {
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
-  width: 400px;
-  height: 800px;
+  height: 699px;
   margin: 0;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
-#comparison figure>img {
+#comparison #divisor-2>img {
   position: relative;
   width: 100%;
 }
 
-#comparison figure div {
-  background-image: url(../media/images/about/after.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+#comparison-before {
+  background-image: url(../media/images/about/1.png);
+  width: 336px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+#comparison #divisor-2 {
+  background-image: url(../media/images/about/2.png);
+  overflow: hidden;
   width: 0;
-  height: 800px;
+  bottom: 0;
+}
+#comparison #divisor {
+  background-image: url(../media/images/about/3.png);
+  width: 0;
   overflow: hidden;
   bottom: 0;
   height: 100%;
@@ -508,6 +512,7 @@ a.btn-custom-hero:hover::after {
   border-radius: 5px;
   padding: 20px;
   transition: 0.3s;
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.75); 
 
   text-align: center;
 }
@@ -591,6 +596,37 @@ a.btn-custom-hero:hover::after {
   #award-3-place {
     top: 860px;
   }
+}
+
+/* ================================================== */
+/* Contact Us section */
+/* ================================================== */
+
+.contact-list .contact-item {
+  border: 1px solid grey;
+  border-bottom: 0;
+  padding: 16px;
+}
+.contact-list .contact-item:last-child {
+  border-bottom: 1px solid grey;
+}
+
+.contact-list .contact-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.contact-list .contact-position {
+  font-size: 18px;
+}
+
+.contact-list .contact-details > div {
+  margin: 0;
+}
+
+.contact-details i {
+  font-size: 16px;
 }
 
 /* ================================================== */
