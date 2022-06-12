@@ -138,6 +138,13 @@ a.btn-custom-hero:hover::after {
   width: 400px; 
   height: 500px;
   padding-top: 30px;
+  transition: 0.5s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #comparison:hover {
+    transform: translate(0, -30px);
+  }
 }
 
 #comparison-before,
@@ -635,7 +642,13 @@ a.btn-custom-hero:hover::after {
 /* ================================================== */
 
 .grey-hover {
-  margin-bottom: 20px;
+  margin: 0px 5px 20px 5px;
+  transition: 0.3s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .grey-hover:hover {
+    transform: translate(0, -3px);
+  }
 }
 
 /* ================================================== */
@@ -732,4 +745,36 @@ a.btn-custom-register:hover::after {
 footer .logo {
   padding: 2rem;
   width: 100%;
+}
+
+.socials {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.socials > div {
+  margin: 0 0.75rem;
+}
+
+@media (hover: none), (hover: hover) and (pointer: coarse) {
+  .socials .social-instagram a {
+    color: #C13584; 
+  }
+  .socials .social-facebook a {
+    color: #4267B2
+  }
+  .socials .social-linkedin a {
+    color: #0077B5
+  }
+}
+
+
+.socials .social-instagram a:hover {
+  color: #C13584; 
+}
+.socials .social-facebook a:hover {
+  color: #4267B2
+}
+.socials .social-linkedin a:hover {
+  color: #0077B5
 }
