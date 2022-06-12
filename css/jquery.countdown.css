@@ -104,6 +104,13 @@
 	/* background: rgba(255,255,255,.1); */
 }
 
+
+@media (max-width:767px){
+	.countdown-s2 .countdown-show4 .countdown-section {
+		margin-right: 0px;
+	}
+}
+
 .countdown-s2.no-bg .countdown-section{
 	background:none;
 }
