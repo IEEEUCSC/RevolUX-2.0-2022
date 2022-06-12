@@ -594,12 +594,29 @@ a.btn-custom-hero:hover::after {
     flex-direction: row;
     padding-top: 50vh;
   }
+
   #award-2-place {
     top: 420px;
   }
 
   #award-3-place {
     top: 840px;
+  }
+
+  .awards:hover {
+    transform: translate(0, -5px);
+  }
+
+  #award-1-place .awards:hover {
+    background-color: #f8cc7688;
+  }
+
+  #award-2-place .awards:hover {
+    background-color: #cabfb788;
+  }
+
+  #award-3-place .awards:hover {
+    background-color: #d8ac8788;
   }
 }
 
