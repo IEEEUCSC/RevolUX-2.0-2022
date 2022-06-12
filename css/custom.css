@@ -599,6 +599,60 @@ a.btn-custom-hero:hover::after {
 }
 
 /* ================================================== */
+/* Register section */
+/* ================================================== */
+
+a.btn-custom-register {
+    position: relative;
+    padding: 1rem 2.5rem;
+
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+
+    background-color: rgba(192, 192, 192, 0.125);
+    backdrop-filter: blur(15px);
+}
+
+a.btn-custom-register:hover {
+    background-color: #ffffff88;
+    color: #101010;
+    backdrop-filter: none;
+}
+
+a.btn-custom-register::before,
+a.btn-custom-register::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  transition: width 0.3s, height 0.3s 0.3s;
+}
+
+a.btn-custom-register::before {
+  top: -0.25rem;
+  left: -0.25rem;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+
+a.btn-custom-register::after {
+  bottom: -0.25rem;
+  right: -0.25rem;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+a.btn-custom-register:hover::before,
+a.btn-custom-register:hover::after {
+  width: calc(100% + 0.5rem);
+  height: calc(100% + 0.5rem);
+}
+
+/* ================================================== */
 /* Contact Us section */
 /* ================================================== */
 
