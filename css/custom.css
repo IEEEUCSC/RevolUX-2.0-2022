@@ -166,19 +166,19 @@ a.btn-custom-hero:hover::after {
 }
 
 #comparison-before {
-  background-image: url(../media/images/about/1.png);
+  background-image: url(../media/images/about/1.webp);
   width: 336px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 #comparison #divisor-2 {
-  background-image: url(../media/images/about/2.png);
+  background-image: url(../media/images/about/2.webp);
   overflow: hidden;
   width: 0;
   bottom: 0;
 }
 #comparison #divisor {
-  background-image: url(../media/images/about/3.png);
+  background-image: url(../media/images/about/3.webp);
   width: 0;
   overflow: hidden;
   bottom: 0;
