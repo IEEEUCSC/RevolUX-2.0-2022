@@ -101,7 +101,7 @@
 	float:left;
 	padding:20px 0 10px 0;
 	margin-right:10px;
-	background: rgba(255,255,255,.1);
+	/* background: rgba(255,255,255,.1); */
 }
 
 .countdown-s2.no-bg .countdown-section{

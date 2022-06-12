@@ -506,6 +506,10 @@ a.btn-custom-hero:hover::after {
 /* Awards section */
 /* ================================================== */
 
+#section-awards {
+  color: white;
+}
+
 .awards {
   background-color: #ffffff52;
   backdrop-filter: blur(10px);
@@ -549,11 +553,22 @@ a.btn-custom-hero:hover::after {
 #award-1-place img {
   height: 270px;
 }
+#award-1-place .award-desc h1 {
+  color: #f8cc76;
+}
+
 #award-2-place img {
   height: 250px;
 }
+#award-2-place .award-desc h1 {
+  color: #cabfb7;
+}
+
 #award-3-place img {
   height: 230px;
+}
+#award-3-place .award-desc h1 {
+  color: #d8ac87;
 }
 
 @media (min-height: 850px) {
@@ -599,6 +614,14 @@ a.btn-custom-hero:hover::after {
 }
 
 /* ================================================== */
+/* Sponsor section */
+/* ================================================== */
+
+.grey-hover {
+  margin-bottom: 20px;
+}
+
+/* ================================================== */
 /* Register section */
 /* ================================================== */
 
@@ -606,7 +629,7 @@ a.btn-custom-register {
     position: relative;
     padding: 1rem 2.5rem;
 
-    color: black;
+    color: white;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
@@ -614,12 +637,14 @@ a.btn-custom-register {
 
     background-color: rgba(192, 192, 192, 0.125);
     backdrop-filter: blur(15px);
+    border: 2px solid white;
 }
 
 a.btn-custom-register:hover {
-    background-color: #ffffff88;
-    color: #101010;
+    background-color: #ffffff;
+    color: black;
     backdrop-filter: none;
+    border: 2px solid transparent;
 }
 
 a.btn-custom-register::before,
@@ -633,23 +658,23 @@ a.btn-custom-register::after {
 }
 
 a.btn-custom-register::before {
-  top: -0.25rem;
-  left: -0.25rem;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
+  top: -0.4rem;
+  left: -0.4rem;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
 }
 
 a.btn-custom-register::after {
-  bottom: -0.25rem;
-  right: -0.25rem;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+  bottom: -0.4rem;
+  right: -0.4rem;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 a.btn-custom-register:hover::before,
 a.btn-custom-register:hover::after {
-  width: calc(100% + 0.5rem);
-  height: calc(100% + 0.5rem);
+  width: calc(100% + 0.8rem);
+  height: calc(100% + 0.8rem);
 }
 
 /* ================================================== */

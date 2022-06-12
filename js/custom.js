@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   new ScrollMagic.Scene({
     triggerElement: window.innerWidth > 993 ? "#section-about" : "#divisor",
     duration: 300,
+    offset: -200,
   })
     .setTween(
       gsap.to("#divisor-2", {
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   new ScrollMagic.Scene({
     triggerElement: window.innerWidth > 993 ? "#section-about" : "#divisor",
     duration: 300,
-    offset: 300,
+    offset: 100,
   })
     .setTween(
       gsap.to("#divisor", {
