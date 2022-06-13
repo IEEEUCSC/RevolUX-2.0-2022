@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /*===========================
+   * Navbar Logo
+   *===========================*/
   const logo = document.getElementById("logo");
 
   if (window.scrollY < 10 && window.innerWidth > 993) logo.style.opacity = 0;
@@ -9,10 +12,48 @@ document.addEventListener("DOMContentLoaded", () => {
     else logo.style.opacity = 1;
   });
 
-  /***************************
-   * Scroll Magic Stuff
-   ***************************/
+  /*==========================
+   * Schedule
+   *==========================*/
 
+  const currentDate = new Date();
+
+  const timelineItems = document.getElementsByClassName("timeline-event");
+  // Stores index of last past event
+  var pastIndex = 0;
+  [...timelineItems].forEach((item, index) => {
+    const date = new Date(
+      item.getElementsByClassName("timeline-date")[0].innerHTML
+    );
+
+    // Checks if past event
+    if (date < currentDate) {
+      item.classList.add("timeline-past");
+      pastIndex = index;
+    }
+  });
+  const upcomingEvent = timelineItems[pastIndex + 1] || null;
+  // Upcoming event
+  if (upcomingEvent) {
+    upcomingEvent.classList.add("timeline-upcoming");
+  }
+
+  /*==========================
+   * Register
+   *==========================*/
+
+  const countdownTo = new Date(2022, 05, 22, 0);
+  if (currentDate >= countdownTo) {
+    const registerTitle = document.getElementById("register-title");
+    const registration = document.getElementById("registration");
+
+    registerTitle.innerHTML = "Registration Closed";
+    registration.remove();
+  }
+
+  /*==========================
+   * Scroll Magic
+   *==========================*/
   var controller = new ScrollMagic.Controller();
 
   /**
