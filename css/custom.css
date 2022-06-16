@@ -19,6 +19,9 @@ body {
     background-color: var(--primary-color-1);
 }
 
+.logo {
+  height: 60px;
+}
 
 /* ================================================== */
 /* Hero section */
@@ -48,7 +51,7 @@ body {
     margin-bottom: 2rem;
 }
 
-a.btn-custom-hero {
+.btn-custom-hero {
     position: relative;
     padding: 1rem 2.5rem;
 
@@ -62,14 +65,24 @@ a.btn-custom-hero {
     backdrop-filter: blur(15px);
 }
 
-a.btn-custom-hero:hover {
+.btn-custom-hero:disabled {
+  color: grey;
+  margin: 0;
+  border: none;
+}
+.btn-custom-hero:disabled:before,
+.btn-custom-hero:disabled:after {
+  border-color: grey;
+}
+
+.btn-custom-hero:not(:disabled):hover {
     background-color: var(--primary-color-1);
     color: #101010;
     backdrop-filter: none;
 }
 
-a.btn-custom-hero::before,
-a.btn-custom-hero::after {
+.btn-custom-hero::before,
+.btn-custom-hero::after {
   content: "";
   display: block;
   position: absolute;
@@ -78,22 +91,22 @@ a.btn-custom-hero::after {
   transition: width 0.3s, height 0.3s 0.3s;
 }
 
-a.btn-custom-hero::before {
+.btn-custom-hero::before {
   top: -0.25rem;
   left: -0.25rem;
   border-top: 1px solid var(--primary-color-1);
   border-left: 1px solid var(--primary-color-1);
 }
 
-a.btn-custom-hero::after {
+.btn-custom-hero::after {
   bottom: -0.25rem;
   right: -0.25rem;
   border-right: 1px solid var(--primary-color-1);
   border-bottom: 1px solid var(--primary-color-1);
 }
 
-a.btn-custom-hero:hover::before,
-a.btn-custom-hero:hover::after {
+.btn-custom-hero:not(:disabled):hover::before,
+.btn-custom-hero:not(:disabled):hover::after {
   width: calc(100% + 0.5rem);
   height: calc(100% + 0.5rem);
 }
@@ -530,7 +543,6 @@ a.btn-custom-hero:hover::after {
 }
 
 .awards {
-  background-color: #ffffff52;
   backdrop-filter: blur(10px);
   border-radius: 5px;
   padding: 20px;
@@ -569,6 +581,16 @@ a.btn-custom-hero:hover::after {
   filter: drop-shadow(0px 0px 10px #00000088);
 }
 
+#award-1-place .awards {
+  background-color: #f8cc7688;
+}
+#award-2-place .awards {
+  background-color: #cabfb788;
+}
+#award-3-place .awards {
+  background-color: #d8ac8788;
+}
+
 #award-1-place img {
   height: 270px;
 }
@@ -589,6 +611,31 @@ a.btn-custom-hero:hover::after {
 #award-3-place .award-desc h1 {
   color: #d8ac87;
 }
+
+@media (hover: hover) and (pointer: fine) and (min-width: 993px) {
+  #award-1-place .awards,
+  #award-2-place .awards,
+  #award-3-place .awards {
+    background-color: #ffffff52;
+  }
+
+  #award-1-place .awards:hover {
+    background-color: #f8cc7688;
+  }
+
+  #award-2-place .awards:hover {
+    background-color: #cabfb788;
+  }
+
+  #award-3-place .awards:hover {
+    background-color: #d8ac8788;
+  }
+
+  .awards:hover {
+    transform: translate(0, -5px);
+  }
+}
+
 
 @media (min-height: 850px) {
     #award-1-place img {
@@ -620,22 +667,6 @@ a.btn-custom-hero:hover::after {
 
   #award-3-place {
     top: 840px;
-  }
-
-  .awards:hover {
-    transform: translate(0, -5px);
-  }
-
-  #award-1-place .awards:hover {
-    background-color: #f8cc7688;
-  }
-
-  #award-2-place .awards:hover {
-    background-color: #cabfb788;
-  }
-
-  #award-3-place .awards:hover {
-    background-color: #d8ac8788;
   }
 }
 
