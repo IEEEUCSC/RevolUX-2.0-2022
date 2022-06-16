@@ -54,6 +54,7 @@ body {
 .btn-custom-hero {
     position: relative;
     padding: 1rem 2.5rem;
+    border: none;
 
     color: var(--primary-color-1);
     font-size: 1rem;
@@ -68,7 +69,6 @@ body {
 .btn-custom-hero:disabled {
   color: grey;
   margin: 0;
-  border: none;
 }
 .btn-custom-hero:disabled:before,
 .btn-custom-hero:disabled:after {
