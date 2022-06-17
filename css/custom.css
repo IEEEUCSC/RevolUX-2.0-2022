@@ -19,10 +19,6 @@ body {
     background-color: var(--primary-color-1);
 }
 
-.logo {
-  height: 60px;
-}
-
 /* ================================================== */
 /* Hero section */
 /* ================================================== */
@@ -33,6 +29,9 @@ body {
 
 #logo {
   opacity: 0;
+}
+#logo .logo {
+  height: 55px;
 }
 
 @media screen and (max-width: 991px) {
