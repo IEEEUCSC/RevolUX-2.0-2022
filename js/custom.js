@@ -11,6 +11,41 @@ window.addEventListener("scroll", () => {
   else logo.style.opacity = 1;
 });
 
+// Checking which transitionEnd event to use depending on the browser
+whichTransitionEvent = () => {
+  let t,
+    el = document.createElement("fakeelement");
+
+  let transitions = {
+    transition: "transitionend",
+    OTransition: "oTransitionEnd",
+    MozTransition: "transitionend",
+    WebkitTransition: "webkitTransitionEnd",
+  };
+
+  for (t in transitions) {
+    if (el.style[t] !== undefined) {
+      return transitions[t];
+    }
+  }
+};
+
+const transitionEvent = whichTransitionEvent();
+const logoNavbar1 = document.getElementById("logo-navbar-1");
+const logoNavbar2 = document.getElementById("logo-navbar-2");
+const logoList = [logoNavbar1, logoNavbar2];
+var index = 1;
+const changeLogo = () => {
+  index = 1 - index;
+  console.log(`Revealing ${index} logo`);
+  logoList[index].classList.remove("animate");
+  logoList[index].addEventListener(transitionEvent, () => {
+    logoList[1 - index].classList.add("animate");
+    logoList[index].removeEventListener(transitionEvent, this);
+  });
+};
+setInterval(changeLogo, 3000);
+
 /*==========================
  * Schedule
  *==========================*/
@@ -54,7 +89,7 @@ if (currentDate >= closingDate || registrationClosed) {
   const registerTitle = document.getElementById("register-title");
   const registration = document.getElementById("registration");
 
-  registerTitle.innerHTML = "Registration Closed";
+  registerTitle.innerHTML = "Registrations Closed";
   registration.remove();
 }
 
