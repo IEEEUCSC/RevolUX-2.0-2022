@@ -37,7 +37,6 @@ const logoList = [logoNavbar1, logoNavbar2];
 var index = 1;
 const changeLogo = () => {
   index = 1 - index;
-  console.log(`Revealing ${index} logo`);
   logoList[index].classList.remove("animate");
   logoList[index].addEventListener(transitionEvent, () => {
     logoList[1 - index].classList.add("animate");
