@@ -19,6 +19,10 @@ body {
     background-color: var(--primary-color-1);
 }
 
+#back-to-top {
+  padding: 0;
+}
+
 /* ================================================== */
 /* Hero section */
 /* ================================================== */
@@ -399,11 +403,11 @@ body {
 } 
 
 @media (min-width: 768px) {
-  .timeline-item:nth-child(odd) .timeline-content.wow.fadeIn {
+  .timeline-event:nth-child(odd) .timeline-content.wow.fadeIn {
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
   } 
-  .timeline-item:nth-child(even) .timeline-content.wow.fadeIn {
+  .timeline-event:nth-child(even) .timeline-content.wow.fadeIn {
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
   } 
@@ -509,22 +513,22 @@ body {
 .timeline-centered .timeline-content {
     width: 50%;
   }
-  .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
+  .timeline-centered > .timeline-event:nth-child(odd) .timeline-info {
     float: left;
     text-align: right;
     padding-right: 30px;
   }
-  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
+  .timeline-centered > .timeline-event:nth-child(odd) .timeline-content {
     float: right;
     text-align: left;
     padding-left: 30px;
   }
-  .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
+  .timeline-centered > .timeline-event:nth-child(even) .timeline-info {
     float: right;
     text-align: left;
     padding-left: 30px;
   }
-  .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+  .timeline-centered > .timeline-event:nth-child(even) .timeline-content {
     float: left;
     text-align: right;
     padding-right: 30px;
@@ -750,6 +754,11 @@ body {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+
+.sponsor-tier-title {
+  font-size: 22px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .grey-hover:hover {
     -webkit-transform: translate(0, -3px);
