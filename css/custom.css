@@ -572,7 +572,8 @@ body {
 }
 
 .timeline-upcoming .timeline-title,
-.timeline-upcoming .timeline-date {
+.timeline-upcoming .timeline-date,
+.timeline-postponed {
   color: var(--primary-color-1);
 }
 /* ================================================== */
